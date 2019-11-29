@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/pull/index",
+    "pages/push/push",
+    "pages/pay/pay"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发订阅消息",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#222222",
+    "selectedColor": "#FF3000",
+    "backgroundColor": "#FFF",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/pull/index",
+        "text": "订阅"
+      },
+      {
+        "pagePath": "pages/push/push",
+        "text": "推送"
+      },
+      {
+        "pagePath": "pages/pay/pay",
+        "text": "支付"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

@@ -1,0 +1,17 @@
+<!--pages/push/push.wxml-->
+<form class="padding">
+  <view class="cu-form-group">
+    <view class="title">日期选择</view>
+    <picker mode="date" value="{{date}}" start="2015-09-01" end="2030-09-01" bindchange="DateChange">
+      <view class="picker">
+        {{date}}
+      </view>
+    </picker>
+  </view>
+  <view class="cu-form-group">
+    <textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaInput" placeholder="多行文本输入框"></textarea>
+  </view>
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-blue margin-tb-sm lg" bindtap="sendMessageByClick">推送消息</button>
+  </view>
+</form>

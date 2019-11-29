@@ -1,0 +1,13 @@
+<!--miniprogram/pages/pay/pay.wxml-->
+<!-- plugin/components/pay.wxml -->
+<!-- 上线时，version 应改为 "release"，并确保插件所有者小程序已经发布 -->
+<functional-page-navigator
+  version="develop"
+  name="requestPayment"
+  args="{{ args }}"
+  bind:success="paymentSuccess"
+  bind:fail="paymentFailed"
+>
+  <button class="payment-button">支付 0.01 元</button>
+</functional-page-navigator>
+
