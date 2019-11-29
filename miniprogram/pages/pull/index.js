@@ -2,7 +2,7 @@
 //获取应用实例
 const app = getApp()
 const db = wx.cloud.database()
-let templateId = 'FQAiSMdR5xibmnWL7zzIK26Px7vnHFY-40Oemx2rbOQ'; // 订阅消息模版id
+const templateId = 'FQAiSMdR5xibmnWL7zzIK26Px7vnHFY-40Oemx2rbOQ'; // 订阅消息模版id
 Page({
   data: {
     isAccept: false, 
