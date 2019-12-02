@@ -67,18 +67,21 @@ wx.requestSubscribeMessage({
 &emsp;&emsp;1、调用订阅消息需在tab绑定事件（或支付）中调用，否则不允许调用；
 ![不允许调用订阅消息方法](https://upload-images.jianshu.io/upload_images/2783386-fc43496266e8f10e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-2、用户点击允许但未勾选不再提醒，则只能推送一次性提醒，以后需要推送则需要再次发起申请订阅流程。
+&emsp;&emsp;2、用户点击允许但未勾选不再提醒，则只能推送一次性提醒，以后需要推送则需要再次发起申请订阅流程。
 
 ![小程序订阅消息申请对话框.png](https://upload-images.jianshu.io/upload_images/2783386-d0adb58e0b277a3e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-3、发起过一次订阅申请之后用户在设置中不允许通知，则无法弹出申请对话框：
+&emsp;&emsp;3、发起过一次订阅申请之后用户在设置中不允许通知，则无法弹出申请对话框：
 ![图片.png](https://upload-images.jianshu.io/upload_images/2783386-b399824526dd0ed6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+&emsp;&emsp;4、发起一次订阅消息只允许申请1-3个模板，超过3个将报错：
+![同时申请超过3条订阅消息模板报错.png](https://upload-images.jianshu.io/upload_images/2783386-cfa642d2dd400d54.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-&emsp;&emsp;4、如果只需要小程序端允许接收订阅消息，而不需要在小程序端发起推送订阅消息，则不需要小程序端执行第三步，可由服务端发起推送；
 
-&emsp;&emsp;5、调用接口下发订阅消息有HTTPS 调用和云调用两种方式，如使用 [HTTPS 调用](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/subscribe-message/subscribeMessage.send.html#请求地址)，则不用使用云调用方式；
+&emsp;&emsp;5、如果只需要小程序端允许接收订阅消息，而不需要在小程序端发起推送订阅消息，则不需要小程序端执行第三步，可由服务端发起推送；
+
+&emsp;&emsp;6、调用接口下发订阅消息有HTTPS 调用和云调用两种方式，如使用 [HTTPS 调用](https://developers.weixin.qq.com/miniprogram/dev/api-backend/open-api/subscribe-message/subscribeMessage.send.html#请求地址)，则不用使用云调用方式；
 
 ### 总结：小程序订阅消息流程见下图。
 
