@@ -1,17 +1,7 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
 
-<view class="cu-bar bg-white solid-bottom" wx:if="{{!isAccept}}">
-    <view class='action'>
-      <text class='cuIcon-check text-gray'></text>  如果未订阅消息，就弹出对话框
-    </view>
+<view class="cu-bar bg-white solid-bottom">
     <view class='action'>
       <button class="cu-btn bg-green shadow" bindtap="subscriptionNotice">订阅</button>
     </view>
